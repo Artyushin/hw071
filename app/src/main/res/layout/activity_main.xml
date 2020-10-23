@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorCalc"
+            android:gravity="right"
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_name_top"
+        android:layout_below="@+id/display">
+
+        <TextView
+            android:id="@+id/A_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="A"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/R_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/R_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="R"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/A_1"
+            app:layout_constraintEnd_toStartOf="@+id/T_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/T_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="T"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/R_1"
+            app:layout_constraintEnd_toStartOf="@+id/Y_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Y_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="Y"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/T_1"
+            app:layout_constraintEnd_toStartOf="@+id/U_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/U_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="U"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Y_1"
+            app:layout_constraintEnd_toStartOf="@+id/S_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/S_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="S"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/U_1"
+            app:layout_constraintEnd_toStartOf="@+id/H_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/H_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="H"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/S_1"
+            app:layout_constraintEnd_toStartOf="@+id/I_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/I_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="I"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/H_1"
+            app:layout_constraintEnd_toStartOf="@+id/N_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/N_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="N"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/I_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_name_top"
+        android:orientation="horizontal"
+        android:id="@+id/key">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/last_name_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/A_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="A"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/R_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/R_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="R"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/T_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/A_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/T_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="T"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/Y_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/R_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/Y_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="Y"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/U_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/T_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/U_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="U"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/S_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Y_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/S_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="S"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/H_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/U_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/H_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="H"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/I_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/S_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/I_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="I"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/N_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/H_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/N_3"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="N"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/I_3"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/last_name_left">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/clear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="C"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/negative"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="+/-"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="%"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/four"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/five"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/six"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/seven"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/eight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/nine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:baselineAligned="false">
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/zero"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+                <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/comma"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:text=","
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/last_name_middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/keyboard"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/A_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="A"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/R_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/R_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="R"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/T_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/A_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/T_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="T"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/Y_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/R_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/Y_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="Y"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/U_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/T_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/U_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="U"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/S_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Y_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/S_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="S"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/H_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/U_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/H_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="H"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/I_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/S_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/I_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="I"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/N_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/H_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/N_4"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="N"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/I_4"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/operation"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/last_name_middle"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/division"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="/"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+            <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/mul"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="x"
+                android:textColor="@android:color/black"
+                android:textSize="40sp" />
+
+            <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/sub"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+            <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+            <Button xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/equally"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:text="="
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/last_name_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/operation"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/A_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="A"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/R_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/R_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="R"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/T_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/A_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/T_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="T"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/Y_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/R_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/Y_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="Y"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/U_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/T_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/U_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="U"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/S_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Y_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/S_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="S"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/H_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/U_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/H_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="H"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/I_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/S_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/I_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="I"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="@id/N_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/H_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/N_5"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_horizontal"
+                android:text="N"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/I_5"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_name_below"
+        android:layout_below="@+id/key">
+
+        <TextView
+            android:id="@+id/A_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="A"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/R_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/R_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="R"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/A_2"
+            app:layout_constraintEnd_toStartOf="@+id/T_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/T_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="T"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/R_2"
+            app:layout_constraintEnd_toStartOf="@+id/Y_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Y_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="Y"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/T_2"
+            app:layout_constraintEnd_toStartOf="@+id/U_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/U_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="U"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Y_2"
+            app:layout_constraintEnd_toStartOf="@+id/S_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/S_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="S"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/U_2"
+            app:layout_constraintEnd_toStartOf="@+id/H_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/H_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="H"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/S_2"
+            app:layout_constraintEnd_toStartOf="@+id/I_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/I_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="I"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/H_2"
+            app:layout_constraintEnd_toStartOf="@+id/N_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/N_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:text="N"
+            android:textSize="24dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/I_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
